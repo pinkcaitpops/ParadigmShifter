@@ -251,28 +251,35 @@ The user is continuing this conversation. Consider the previous context.
     refinement_task = Task(
         description="""
         Take the Critic's feedback and the surviving strategy.
-        Refine it into a concrete, executable "Master Plan."
+        Synthesize it into a SPECIFIC, ACTIONABLE breakdown.
         
-        Ensure the plan:
-        1. Maintains the rebellious "edge" (don't let the Critic make it boring).
-        2. Mitigates the specific risks the Critic identified.
-        3. Is framed as a professional strategy (Strategic Ambiguity).
+        CRITICAL REQUIREMENTS:
+        1. Be CONCRETE and SPECIFIC to the user's actual situation - no generic advice.
+        2. Maintain the rebellious "edge" (don't let the Critic make it boring).
+        3. Address the specific risks the Critic identified.
+        4. Each step must be something the user can DO THIS WEEK.
+        
+        DO NOT give vague platitudes. Give specific tactics, scripts, and actions.
         """,
         expected_output="""
-        Final Output Format:
+        YOU MUST USE THIS EXACT FORMAT:
+        
         ## The Paradigm Shift
-        [The core insight that changes the game]
+        [One sentence: The core insight that changes the game for THIS specific problem]
 
-        ## The Grey Area
-        [The specific norm or rule we are bending]
+        ## The Grey Area  
+        [One sentence: The specific norm, rule, or assumption we are exploiting]
 
         ## The Execution Protocol
-        1. [Step 1]
-        2. [Step 2]
-        3. [Step 3]
+        1. [SPECIFIC action with exact script/template if applicable]
+        2. [SPECIFIC action with timeline]
+        3. [SPECIFIC action with measurable outcome]
+
+        ## Risk Mitigation
+        [How to handle the risks the Critic identified]
 
         ## The Cover Story
-        [How to frame this to the outside world so it looks normal]
+        [Exact language to use when explaining this to others]
         """,
         agent=maverick
     )
