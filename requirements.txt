@@ -1,0 +1,9 @@
+crewai==0.1.32
+fastapi
+uvicorn
+python-dotenv
+requests
+langchain
+langchain_openai
+langchain-anthropic
+langchain-google-genai
