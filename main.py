@@ -248,73 +248,38 @@ The user is continuing this conversation. Consider the previous context.
 
     # Task 3: The Synthesis (The "Clean" Hack)
     # The Maverick gets the final word to polish the Critic's chosen path.
-    # NOW INCLUDES FULL ANALYSIS from previous tasks for transparency.
     refinement_task = Task(
         description="""
         Take the Critic's feedback and the surviving strategy.
-        Synthesize it into a SPECIFIC, ACTIONABLE breakdown.
+        Refine it into a concrete, executable "Master Plan."
         
-        CRITICAL REQUIREMENTS:
-        1. Be CONCRETE and SPECIFIC to the user's actual situation - no generic advice.
-        2. Maintain the rebellious "edge" (don't let the Critic make it boring).
-        3. Address the specific risks the Critic identified.
-        4. Each step must be something the user can DO THIS WEEK.
+        Ensure the plan:
+        1. Maintains the rebellious "edge" (don't let the Critic make it boring).
+        2. Mitigates the specific risks the Critic identified.
+        3. Is framed as a professional strategy (Strategic Ambiguity).
         
-        DO NOT give vague platitudes. Give specific tactics, scripts, and actions.
-        
-        IMPORTANT: Your output must include a COMPLETE SUMMARY of the entire analysis process.
+        IMPORTANT: Before presenting the final plan, briefly summarize:
+        - The strategies you initially proposed
+        - Which one the Critic selected and why
+        - How you refined it based on their feedback
         """,
         expected_output="""
-        YOU MUST USE THIS EXACT FORMAT:
+        Final Output Format:
         
-        ---
-        # 🔥 MAVERICK'S INITIAL STRATEGIES
-        
-        **Strategy 1:** [Name]
-        [Brief description of the first radical approach]
-        
-        **Strategy 2:** [Name]
-        [Brief description of the second radical approach]
-        
-        **Strategy 3:** [Name]
-        [Brief description of the third radical approach]
-        
-        ---
-        # 🎯 CRITIC'S ANALYSIS
-        
-        **Strategy 1 Verdict:** [REJECTED/RISKY/VIABLE]
-        - Why it fails: [One sentence]
-        - Catastrophic risk: [One sentence]
-        
-        **Strategy 2 Verdict:** [REJECTED/RISKY/VIABLE]
-        - Why it fails: [One sentence]
-        - Catastrophic risk: [One sentence]
-        
-        **Strategy 3 Verdict:** [REJECTED/RISKY/VIABLE]
-        - Why it fails: [One sentence]
-        - Catastrophic risk: [One sentence]
-        
-        **🏆 SURVIVOR:** [Which strategy was selected and why in one sentence]
-        
-        ---
-        # ✅ FINAL SYNTHESIS
+        ## The Analysis Journey
+        [Brief summary of the strategies considered and why the survivor was chosen]
         
         ## The Paradigm Shift
-        [One sentence: The core insight that changes the game]
+        [The core insight that changes the game]
 
-        ## The Grey Area  
-        [One sentence: The specific norm, rule, or assumption we are exploiting]
+        ## The Grey Area
+        [The specific norm or rule we are bending]
 
         ## The Execution Protocol
-        1. [SPECIFIC action with exact script/template if applicable]
-        2. [SPECIFIC action with timeline]
-        3. [SPECIFIC action with measurable outcome]
-
-        ## Risk Mitigation
-        [How to handle the risks the Critic identified]
+        [The concrete steps - as many as needed]
 
         ## The Cover Story
-        [Exact language to use when explaining this to others]
+        [How to frame this to the outside world so it looks normal]
         """,
         agent=maverick
     )
