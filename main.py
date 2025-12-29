@@ -248,6 +248,7 @@ The user is continuing this conversation. Consider the previous context.
 
     # Task 3: The Synthesis (The "Clean" Hack)
     # The Maverick gets the final word to polish the Critic's chosen path.
+    # NOW INCLUDES FULL ANALYSIS from previous tasks for transparency.
     refinement_task = Task(
         description="""
         Take the Critic's feedback and the surviving strategy.
@@ -260,12 +261,46 @@ The user is continuing this conversation. Consider the previous context.
         4. Each step must be something the user can DO THIS WEEK.
         
         DO NOT give vague platitudes. Give specific tactics, scripts, and actions.
+        
+        IMPORTANT: Your output must include a COMPLETE SUMMARY of the entire analysis process.
         """,
         expected_output="""
         YOU MUST USE THIS EXACT FORMAT:
         
+        ---
+        # 🔥 MAVERICK'S INITIAL STRATEGIES
+        
+        **Strategy 1:** [Name]
+        [Brief description of the first radical approach]
+        
+        **Strategy 2:** [Name]
+        [Brief description of the second radical approach]
+        
+        **Strategy 3:** [Name]
+        [Brief description of the third radical approach]
+        
+        ---
+        # 🎯 CRITIC'S ANALYSIS
+        
+        **Strategy 1 Verdict:** [REJECTED/RISKY/VIABLE]
+        - Why it fails: [One sentence]
+        - Catastrophic risk: [One sentence]
+        
+        **Strategy 2 Verdict:** [REJECTED/RISKY/VIABLE]
+        - Why it fails: [One sentence]
+        - Catastrophic risk: [One sentence]
+        
+        **Strategy 3 Verdict:** [REJECTED/RISKY/VIABLE]
+        - Why it fails: [One sentence]
+        - Catastrophic risk: [One sentence]
+        
+        **🏆 SURVIVOR:** [Which strategy was selected and why in one sentence]
+        
+        ---
+        # ✅ FINAL SYNTHESIS
+        
         ## The Paradigm Shift
-        [One sentence: The core insight that changes the game for THIS specific problem]
+        [One sentence: The core insight that changes the game]
 
         ## The Grey Area  
         [One sentence: The specific norm, rule, or assumption we are exploiting]
